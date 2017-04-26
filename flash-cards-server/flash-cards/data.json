@@ -1,0 +1,23 @@
+[
+  {
+    "side-a": "Object Oriented Programming",
+    "side-b": "Programming paradigm wherin the object is to encapsulate data and methods in a single always-accesible package",
+    "difficulty": "low",
+    "category": "JavaScript",
+    "subCategory": "High-level concept"
+  },
+  {
+    "side-a": "Functional Programming",
+    "side-b": "A programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions[1] or declarations[2] instead of statements. In functional code, the output value of a function depends only on the arguments that are passed to the function, so calling a function f twice with the same value for an argument x will produce the same result f(x) each time. Eliminating side effects, i.e. changes in state that do not depend on the function inputs, can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.",
+    "difficulty": "low",
+    "category": "JavaScript",
+    "subCategory": "High-level concept"
+  },
+  {
+    "side-a": "Higher-Order Functions",
+    "side-b": "a function that does at least one of the following: takes one or more functions as arguments (i.e., procedural parameters), returns a function as its result.",
+    "difficulty": "high",
+    "category": "JavaScript",
+    "subCategory": "The Hard Parts"
+  }
+]
