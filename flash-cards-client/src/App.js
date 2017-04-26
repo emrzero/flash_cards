@@ -47,12 +47,32 @@ class App extends Component {
   } 
 
   handleChange(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    })
+
+    // console.log(this.state);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("Submit");
+    const data = { 
+      "side-a" : this.state["side-a"], 
+      "side-b": this.state["side-b"]
+    }
+
+    axios.post('http://localhost:4000/api', data).then(function(response){
+      return response.data;
+    }).then(function(res){
+      console.log(res);
+    }).catch(function(err){
+      console.log(err);
+    });
 
   }
 
@@ -68,10 +88,10 @@ class App extends Component {
               <h4>Add Flash Card</h4>
               <form className="input-box" onSubmit={this.handleSubmit}>
                 <label>Side A</label>
-                <input type="text" onChange={this.handleChange}/>
+                <input name="side-a" type="text" onChange={this.handleChange}/>
                 <br />
-                <label> Side B </label>
-                <input type="text" />
+                <label > Side B </label>
+                <input name="side-b" type="text" onChange={this.handleChange}/>
                 <br />
                 <button type="submit" >Save</button>
               </form>
